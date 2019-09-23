@@ -2,6 +2,8 @@
 ## Run the code
 go get github.com/graphql-go/graphql
 
+go get github.com/graphql-go/handler
+
 go run main.go
 ## Run queries
 While the server is running locally, go to Postman and make a POST request to this url:
