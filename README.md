@@ -9,8 +9,12 @@ go run main.go
 While the server is running locally, go to Postman and make a POST request to this url:
  `localhost:8080/graphql`
  
- In the body section, select GraphQL and insert a query in the query section.
- 
+The query should be a parameter, for example:
+``query={surveyQuestions(id:2){        text
+	              surveyId
+	              answers
+	          }}``
+Add a header with the key `mockedToken`. This would appear as the token that should be sent to the authentication service, however right now it will just be printed out.
  ### Possible queries
 Three named queries are possible:
 - surveysOfStudy: takes the Id of a study and returns its surveys
